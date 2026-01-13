@@ -15,9 +15,62 @@ body {
 [data-theme='light'] body {
   color-scheme: light;
   @apply bg-slate-50 text-slate-900;
-  background: radial-gradient(circle at top, #f8fafc 0%, #e2e8f0 40%, #cbd5f5 100%);
+  background: radial-gradient(circle at top, #ffffff 0%, #f1f5f9 45%, #e2e8f0 100%);
 }
 
 * {
   border-color: rgba(148, 163, 184, 0.2);
+}
+
+[data-theme='light'] .bg-slate-950\/80,
+[data-theme='light'] .bg-slate-950\/60,
+[data-theme='light'] .bg-slate-900\/80,
+[data-theme='light'] .bg-slate-900\/60 {
+  background-color: rgba(248, 250, 252, 0.9);
+}
+
+[data-theme='light'] .border-slate-800,
+[data-theme='light'] .border-slate-700 {
+  border-color: rgba(148, 163, 184, 0.35);
+}
+
+[data-theme='light'] .text-white {
+  color: #0f172a;
+}
+
+[data-theme='light'] .text-slate-100,
+[data-theme='light'] .text-slate-200 {
+  color: #1e293b;
+}
+
+[data-theme='light'] .text-slate-300 {
+  color: #334155;
+}
+
+[data-theme='light'] .text-slate-400 {
+  color: #475569;
+}
+
+[data-theme='light'] .text-slate-500 {
+  color: #64748b;
+}
+
+[data-theme='light'] .bg-slate-800 {
+  background-color: #e2e8f0;
+}
+
+[data-theme='light'] .bg-slate-800\/60 {
+  background-color: rgba(226, 232, 240, 0.6);
+}
+
+[data-theme='light'] .bg-slate-900\/60 input,
+[data-theme='light'] input,
+[data-theme='light'] select,
+[data-theme='light'] textarea {
+  background-color: rgba(248, 250, 252, 0.9);
+  color: #0f172a;
+}
+
+[data-theme='light'] .shadow-soft {
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 }
