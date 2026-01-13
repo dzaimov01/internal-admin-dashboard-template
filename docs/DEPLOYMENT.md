@@ -1,14 +1,14 @@
 # Deployment
 
 ## Local Development
-1. `docker-compose up -d db`
+1. `docker-compose up -d db` (Postgres exposed on `localhost:5433`)
 2. `cd backend && mvn spring-boot:run`
 3. `cd frontend && npm install && npm run dev`
 
 ## Demo Seed Data
 Load sample data with:
 ```bash
-psql -h localhost -U admin -d admin_dashboard -f backend/scripts/seed.sql
+psql -h localhost -p 5433 -U admin -d admin_dashboard -f backend/scripts/seed.sql
 ```
 
 ## Docker Compose

@@ -20,7 +20,7 @@ Auth: JWT access tokens + refresh token strategy (see `/docs/SECURITY_NOTES.md`)
 
 ## Quickstart
 ```bash
-# 1) Start PostgreSQL
+# 1) Start PostgreSQL (exposes on localhost:5433)
 make db
 
 # 2) Start backend
