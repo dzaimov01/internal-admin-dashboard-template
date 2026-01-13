@@ -36,6 +36,7 @@ class IntegrationSecurityTest {
     registry.add("spring.datasource.url", postgres::getJdbcUrl);
     registry.add("spring.datasource.username", postgres::getUsername);
     registry.add("spring.datasource.password", postgres::getPassword);
+    registry.add("app.security.jwt.secret", () -> "test-secret-change-me-please-32chars");
   }
 
   @Autowired

@@ -33,7 +33,7 @@ jobs:
           DB_URL: jdbc:postgresql://localhost:5432/admin_dashboard
           DB_USER: admin
           DB_PASSWORD: admin
-          JWT_SECRET: test-secret-please-change
+          JWT_SECRET: test-secret-change-me-please-32chars
 
   frontend:
     runs-on: ubuntu-latest
