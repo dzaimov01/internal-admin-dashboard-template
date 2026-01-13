@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background: radial-gradient(circle at top, #1e293b 0%, #0b0f1a 45%, #05070d 100%);
+  min-height: 100vh;
+}
+
+[data-theme='light'] body {
+  color-scheme: light;
+  @apply bg-slate-50 text-slate-900;
+  background: radial-gradient(circle at top, #f8fafc 0%, #e2e8f0 40%, #cbd5f5 100%);
+}
+
+* {
+  border-color: rgba(148, 163, 184, 0.2);
+}
