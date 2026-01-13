@@ -2,6 +2,8 @@
 
 A production-ready internal admin dashboard template with CRUD, RBAC, audit trail, and metrics—built to ship real internal tools fast.
 
+![Hero screenshot placeholder](docs/assets/hero-placeholder.svg)
+
 ![Dashboard placeholder](docs/assets/dashboard-placeholder.svg)
 
 ## What You Get
