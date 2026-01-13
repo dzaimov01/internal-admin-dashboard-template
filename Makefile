@@ -13,4 +13,4 @@ frontend:
 dev: db backend frontend
 
 seed:
-	psql -h localhost -p 55432 -U admin -d admin_dashboard -f backend/scripts/seed.sql
+	psql -h localhost -p 56000 -U admin -d admin_dashboard -f backend/scripts/seed.sql
