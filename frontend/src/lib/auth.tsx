@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { apiClient } from '@/lib/api';
 
 export type AuthUser = {
@@ -36,7 +36,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = useCallback(async (email: string, password: string) => {
     const response = await apiClient.post<{ accessToken: string }>(
       '/api/auth/login',
       { email, password }
@@ -46,20 +46,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     window.localStorage.setItem('accessToken', response.accessToken);
     const profile = await apiClient.get<AuthUser>('/api/auth/me');
     setUser(profile);
-  };
+  }, []);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     setAccessToken(null);
     setUser(null);
     apiClient.setToken(null);
     window.localStorage.removeItem('accessToken');
-  };
+  }, []);
 
-  const hasRole = (role: string) => user?.roles.includes(role) ?? false;
+  const hasRole = useCallback((role: string) => user?.roles.includes(role) ?? false, [user]);
 
   const value = useMemo(
     () => ({ user, accessToken, login, logout, hasRole }),
-    [user, accessToken]
+    [user, accessToken, login, logout, hasRole]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
