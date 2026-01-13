@@ -20,6 +20,12 @@ Auth: JWT access tokens + refresh token strategy (see `/docs/SECURITY_NOTES.md`)
 
 ## Quickstart
 ```bash
+# Run everything in Docker (db, backend, frontend)
+docker compose up --build
+```
+
+Local dev (no Docker for app servers):
+```bash
 # 1) Start PostgreSQL (exposes on localhost:56000)
 make db
 

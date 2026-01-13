@@ -5,6 +5,11 @@
 2. `cd backend && mvn spring-boot:run`
 3. `cd frontend && npm install && npm run dev`
 
+## Docker (Full Stack)
+```
+docker compose up --build
+```
+
 ## Demo Seed Data
 Load sample data with:
 ```bash
