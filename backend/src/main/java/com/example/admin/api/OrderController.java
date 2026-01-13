@@ -100,6 +100,9 @@ public class OrderController {
   @PreAuthorize("hasAuthority('orders:write')")
   public ResponseEntity<BulkResult> bulkUpdateStatus(
       @Valid @RequestBody BulkStatusRequest request, HttpServletRequest servletRequest) {
+    if (request.ids().isEmpty()) {
+      throw new IllegalArgumentException("No order IDs provided");
+    }
     int updated = orderService.bulkUpdateStatus(request.ids(), request.status());
     audit("BULK_UPDATE", "Order", "bulk", "Updated status for " + updated + " orders", servletRequest);
     return ResponseEntity.ok(new BulkResult(updated));

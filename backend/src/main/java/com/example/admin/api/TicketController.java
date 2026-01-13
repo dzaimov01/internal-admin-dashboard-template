@@ -101,6 +101,9 @@ public class TicketController {
   @PreAuthorize("hasAuthority('tickets:write')")
   public ResponseEntity<BulkResult> bulkUpdateStatus(
       @Valid @RequestBody BulkStatusRequest request, HttpServletRequest servletRequest) {
+    if (request.ids().isEmpty()) {
+      throw new IllegalArgumentException("No ticket IDs provided");
+    }
     int updated = ticketService.bulkUpdateStatus(request.ids(), request.status());
     audit("BULK_UPDATE", "Ticket", "bulk", "Updated status for " + updated + " tickets", servletRequest);
     return ResponseEntity.ok(new BulkResult(updated));
