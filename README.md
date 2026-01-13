@@ -11,8 +11,6 @@ A production-ready internal admin dashboard template with CRUD, RBAC, audit trai
 - Metrics API + dashboard charts
 - Admin settings, feature flags, and system health view
 
-![Customers placeholder](docs/assets/customers-placeholder.svg)
-
 ## Tech Stack
 Backend: Java 21, Spring Boot 3, Spring Security 6, PostgreSQL, Flyway, OpenAPI, Maven, Testcontainers
 Frontend: Next.js 14, TypeScript, Tailwind CSS, shadcn/ui, React Query, Zod
@@ -70,8 +68,6 @@ Need enterprise-grade security, custom modules, or a multi-tenant rollout? This 
 - RBAC + audit design workshops
 - Enterprise auth integrations
 - Production deployment and observability
-
-![Metrics placeholder](docs/assets/metrics-placeholder.svg)
 
 ## Documentation
 - `docs/ARCHITECTURE.md`
