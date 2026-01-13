@@ -1,6 +1,0 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1600" height="900" fill="#0b0f1a" />
-  <rect x="80" y="80" width="1440" height="740" rx="28" fill="#111827" stroke="#334155" />
-  <text x="140" y="200" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="42">Hero Screenshot Placeholder</text>
-  <text x="140" y="260" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">Replace with a real UI capture for the README hero section</text>
-</svg>
