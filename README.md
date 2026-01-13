@@ -4,8 +4,6 @@ A production-ready internal admin dashboard template with CRUD, RBAC, audit trai
 
 ![Hero screenshot placeholder](docs/assets/hero-placeholder.png)
 
-![Dashboard placeholder](docs/assets/dashboard-placeholder.svg)
-
 ## What You Get
 - CRUD modules for Customers, Orders, and Tickets
 - Role-based access control with fine-grained permissions
