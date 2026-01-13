@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/admin_dashboard}
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:admin}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+app:
+  security:
+    jwt:
+      issuer: internal-admin-dashboard
+      access-token-ttl-minutes: 15
+      refresh-token-ttl-days: 14
+      secret: ${JWT_SECRET:dev-secret-change-me}
+    cors:
+      allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+
+logging:
+  level:
+    org.springframework.security: INFO
